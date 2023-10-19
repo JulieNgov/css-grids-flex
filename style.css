@@ -11,14 +11,6 @@
     font-size: 17px;
 }
 
-body {
-    height: 1000px;
-}
-
-img {
-    width: 100px;
-}
-
 nav {
     height: 60px;
     background-color: var(--main);
