@@ -1,0 +1,188 @@
+:root {
+    --main: #95BCCC;
+    --second: #fde1b7;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    font-size: 17px;
+}
+
+body {
+    height: 1000px;
+}
+
+img {
+    width: 100px;
+}
+
+nav {
+    height: 60px;
+    background-color: var(--main);
+    display: flex;
+    align-items: center;
+    padding-inline: 30px;
+    gap: 20px;
+    color: white;
+    justify-content: space-between;
+}
+
+nav img {
+    width: 60px;
+    flex-shrink: 0;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+    margin-left: 20px;
+    cursor: pointer;
+}
+
+nav li:hover {
+    text-decoration: underline;
+}
+
+nav button {
+    padding: 10px 15px;
+    margin-left: auto;
+    background-color: rgb(255, 255, 255);
+    border: none;
+    border-radius: 15px;
+    color: var(--main);
+    cursor: pointer;
+}
+
+nav button:hover {
+    background-color: var(--second);
+    color: white;
+}
+
+.layout {
+    display: grid;
+    grid-template-columns: 1fr 400px;
+}
+
+.layout main {
+    display: grid;
+    grid-column: 1;
+    grid-template-columns: 1fr 1fr;
+}
+
+.tweet {
+    border: 2px solid var(--second);
+    margin: 10px;
+}
+
+.tweet:nth-child(3n) {
+    grid-column: 1 / -1;
+}
+
+.tweet header {
+    display: flex;
+    align-items: center;
+    background-color: var(--second);
+    gap: 20px;
+    padding: 10px 20px;
+}
+
+.header-name {
+    display: flex;
+    gap: 2px;
+    flex-direction: column;
+}
+
+.header-name h2 {
+    color: white;
+    font-size: 22px;
+}
+
+.header-name p {
+    color: white;
+    font-size: 13px;
+}
+
+.tweet img {
+    width: 60px;
+    background-color: white;
+    border-radius: 50%;
+}
+
+.tweet > p {
+    margin: 10px;
+}
+
+aside {
+    grid-column: 2 / 3;
+    position: sticky;
+    top: 20px;
+    height: 1vh;
+    text-align: center;
+    margin-inline: 50px;
+}
+
+aside h2 {
+    color: var(--main);
+    margin-top: 40px;
+    padding: 10px;
+    border: 2px solid var(--main);
+}
+
+aside ul {
+    padding: 10px;
+    list-style: none;
+    border: 2px solid var(--main);
+    border-top: none;
+}
+
+aside a {
+    text-decoration: none;
+    color: var(--main);
+}
+
+aside a:hover {
+    text-decoration: underline;
+}
+
+
+@media screen and (max-width: 800px) {
+    .layout {
+        grid-template-columns: 1fr;
+        grid-template-rows: 250px;
+    }
+
+    .tweet {
+        grid-column: 1 / -1;
+    }
+
+    aside {
+        grid-column: 1 / -1;
+        grid-row: 1;
+        position: static;
+        margin-inline: 10px;
+    }
+
+    nav {
+        flex-direction: column;
+        height: auto;
+        padding: 15px 0;
+        flex-wrap: wrap;
+    }
+
+    nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    nav img {
+        order: -1;
+    }
+
+    .tweet header {
+        flex-wrap: wrap;
+    }
+}
