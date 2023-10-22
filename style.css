@@ -203,7 +203,7 @@ aside a:hover {
         height: auto;
     }
 
-    .closeIcon {
+    .hamburger .closeIcon {
         display: none;
     }
 }
