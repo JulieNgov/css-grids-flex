@@ -149,7 +149,7 @@ aside a:hover {
 }
 
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 950px) {
     .layout {
         grid-template-columns: 1fr;
         grid-template-rows: 250px;
