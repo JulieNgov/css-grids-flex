@@ -5,19 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rendu</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 <body>
+    <button class="hamburger">
+        <i class="menuIcon material-icons">menu</i>
+        <i class="closeIcon material-icons">close</i>
+    </button>
     <nav>
-        <ul>
-            <li>Home</li>
-            <li>About</li>
-            <li>Contact</li>
-            <li>Settings</li>
-        </ul>
         <img src="logo.png" alt="logo">
-        <div>
-            <button>Log in</button>
-            <button>Sign up</button>
+        <ul class="ul-nav">
+            <li class="menuItem">Home</li>
+            <li class="menuItem">About</li>
+            <li class="menuItem">Contact</li>
+            <li class="menuItem">Settings</li>
+        </ul>
+        <div class="button-nav">
+            <button class="menuItem">Log in</button>
+            <button class="menuItem">Sign up</button>
         </div>
     </nav>
 
@@ -145,5 +150,7 @@
             </ul>
         </aside>
     </section>
+
+<script src="index.js"></script>
 </body>
 </html>

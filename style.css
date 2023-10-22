@@ -33,6 +33,7 @@ nav ul {
     gap: 30px;
     margin-left: 20px;
     cursor: pointer;
+    order: -1;
 }
 
 nav li:hover {
@@ -47,6 +48,11 @@ nav button {
     border-radius: 15px;
     color: var(--main);
     cursor: pointer;
+}
+
+.button-nav {
+    display: flex;
+    gap: 5px;
 }
 
 nav button:hover {
@@ -140,6 +146,10 @@ aside a:hover {
     text-decoration: underline;
 }
 
+.hamburger {
+    display: none;
+}
+
 
 @media screen and (max-width: 800px) {
     .layout {
@@ -160,21 +170,40 @@ aside a:hover {
 
     nav {
         flex-direction: column;
-        height: auto;
         padding: 15px 0;
         flex-wrap: wrap;
+        transform: translateY(-100%);
+        transition: .3s ease;
     }
 
     nav ul {
         flex-wrap: wrap;
         justify-content: center;
-    }
-
-    nav img {
-        order: -1;
+        order: 0;
     }
 
     .tweet header {
         flex-wrap: wrap;
+    }
+
+    .hamburger {
+    display: block;
+    position: absolute;
+    z-index: 100;
+    top: 15px;
+    right: 15px;
+    padding: 4px;
+    border: 1px solid black;
+    background-color: white;
+    cursor: pointer;
+    }
+
+    .showMenu {
+        transform: translateY(0px);
+        height: auto;
+    }
+
+    .closeIcon {
+        display: none;
     }
 }
